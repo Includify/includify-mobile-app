@@ -2,6 +2,7 @@ package com.garlicbread.includify
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -80,6 +81,11 @@ class DashboardActivity : AppCompatActivity() {
 
         binding.appointmentsButton.setOnClickListener {
             val newIntent = Intent(this, AppointmentListActivity::class.java)
+            startActivity(newIntent)
+        }
+
+        binding.chatBot.setOnClickListener {
+            val newIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://6b39-2603-7000-9a00-1808-65be-4d37-70d4-da45.ngrok-free.app"))
             startActivity(newIntent)
         }
 
